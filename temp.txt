@@ -1,0 +1,21 @@
+     let sth = document.getElementById("someButton");
+      sth.addEventListener("click", () => {
+        // notify("Hi", "warning");
+        // notifyModal("title", "<em>Hello guys</em>", "success", "Ok");
+        // attention.toast({ msg: "Hello Word", icon: "error" });
+
+        let html = `
+               <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+        <div class="d-flex flex-row justify-content-evenly" id="reservation-dates-modal">
+          <div class="p-2">
+            <input disable  required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
+          </div>
+
+          <div class="p-2">
+            <input disable  required class="form-control" type="text" name="end" id="end" placeholder="Departure">
+          </div>
+        </div>
+      </form>
+              `;
+        attention.custom({ msg: html, title: "Choose your dates" });
+      });
